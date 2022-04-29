@@ -1,0 +1,33 @@
+---
+pagination:
+  data: posts
+  size: 1
+  alias: post
+  addAllPagesToCollections: true
+tags: posts
+eleventyComputed:
+  pageTitle: "{{ post.title }}"
+template: post
+permalink: "blog/{{ post.slug | slug }}/index.html"
+---
+
+{% set nextPost = collections.posts | getNextCollectionItem(page) %}
+{% set firstPost = collections.posts[0] %}
+
+
+<article>
+  <header>
+    <h1>{{ post.title }}</h1>
+  </header>
+
+  <section></section>
+  <section></section>
+  <section></section>
+
+  <article>
+    <h2></h2>
+    <p></p>
+  </article>
+
+  <footer>Post Footer</footer>
+</article>

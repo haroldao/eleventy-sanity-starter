@@ -1,0 +1,27 @@
+:root {
+  --text: var(--black);
+  --bg: var(--white);
+  --black: #131313;
+  --white: #ffffff;
+  --gray: rgba(238, 238, 238, 0.3);
+
+  --xs: clamp(1.2rem, 2vw, 1.6rem);
+  --sm: clamp(1.2rem, 2vw, 1.8rem);
+  --base: clamp(1.6rem, 3vw, 2.4rem);
+  --lg: clamp(2rem, 4vw, 3.2rem);
+  --xl: clamp(3rem, 5vw, 4.2rem);
+  --2xl: clamp(2.7rem, 7vw, 4.8rem);
+  --3xl: clamp(2.7rem, 8vw, 5.6rem);
+}
+
+@supports not (font-size: clamp(1rem, 2vw, 3rem)) {
+  :root {
+    --xs: 1.4rem;
+    --sm: 1.6rem;
+    --base: 1.8rem;
+    --lg: 2.4rem;
+    --xl: 3.4rem;
+    --2xl: 3.6rem;
+    --3xl: 3.8rem;
+  }
+}

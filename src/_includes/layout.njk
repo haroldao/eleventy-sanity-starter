@@ -1,0 +1,38 @@
+---
+lang: en
+---
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageTitle }}{% if pageTitle %} • {% endif %}{{ general.siteTitle }}</title>
+    <meta name="title" content="{{ general.siteTitle  }}">
+    <meta name="description" content="{{ general.description }}">
+    {% if general.favicon %}      
+      <link rel="icon" type="image/png" href="{{ general.favicon }}"/>
+    {% else %}
+      <link rel="icon" href="data:image"/>
+    {% endif %}
+    {# <link rel="preload" crossorigin as="font" type="font/woff2" href="/assets/fonts/Gellix-Medium.woff2">
+    <link rel="preload" crossorigin as="font" type="font/woff" href="/assets/fonts/Gellix-Regular.woff"> #}
+    {% if general.previewImage %}      
+      <meta property="og:image" content={{ general.previewImage }} />
+      <meta name="twitter:image" content={{ general.previewImage }} />
+    {% endif %}
+    {% include "components/noscript.njk" %}
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body>
+    <div id="root" data-router-wrapper>
+      <div data-router-view="global" data-template="{{ template }}">
+        {% include "components/header.njk" %}
+        <main>{{ content | safe }}</main>
+        {% include "components/footer.njk" %}
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

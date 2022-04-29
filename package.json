@@ -1,0 +1,67 @@
+{
+  "name": "eleventy-sanity-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "watch:js": "esbuild ./src/scripts/main.js --outfile=public/main.js --bundle --watch",
+    "build:js": "esbuild ./src/scripts/main.js --outfile=public/main.js --bundle --minify --target=es2019 --legal-comments=none",
+    "watch:css": "TAILWIND_MODE=watch postcss src/styles/index.css -o public/index.css --verbose -w",
+    "build:css": "NODE_ENV=production postcss src/styles/index.css -o public/index.css --verbose",
+    "clean": "rm -rf public",
+    "build": "run-s clean build:*",
+    "start": "run-p clean watch:*",
+    "netlify": "netlify dev"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "no-console": 1,
+      "no-new": 0,
+      "class-methods-use-this": 0
+    }
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@babel/core": "^7.16.10",
+    "@babel/eslint-parser": "^7.16.5",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.1.7",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-wesbos": "^3.0.2",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.0.2",
+    "postcss-modules": "^4.0.0",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.15"
+  },
+  "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
+    "@portabletext/to-html": "^1.0.2",
+    "@sanity/client": "^2.23.0",
+    "@sanity/image-url": "^1.0.1",
+    "body-scroll-lock": "3.1.5",
+    "dotenv": "^10.0.0",
+    "esbuild": "^0.14.11",
+    "groq": "^2.13.0",
+    "gsap": "^3.9.1",
+    "hls.js": "^1.1.1",
+    "htm": "^3.1.0",
+    "just-debounce-it": "^3.0.1",
+    "just-throttle": "^4.0.1",
+    "lazysizes": "^5.3.2",
+    "postcss-import": "^14.0.2",
+    "smoothscroll-polyfill": "^0.4.4",
+    "vhtml": "^2.2.0"
+  }
+}

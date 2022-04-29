@@ -1,0 +1,84 @@
+@import './base/normalize.css';
+@import './base/fallback.css';
+@import './base/fonts.css';
+@import './base/variables.css';
+@import './base/customClasses.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/** 
+  * Defaults
+  */
+html {
+  @apply text-[10px];
+}
+
+body {
+  @apply bg-primary text-secondary selection:bg-gray font-sans text-sm leading-tight decoration-from-font	underline-offset-4 antialiased;
+}
+
+/** 
+  * Media
+  */
+figure img,
+figure video {
+  @apply h-full w-full object-cover;
+}
+
+.bg-img {
+  @apply h-full w-full bg-cover bg-center bg-no-repeat;
+}
+
+/** 
+  * Typography
+  */
+
+.hl {
+  @apply uppercase tracking-wider;
+}
+
+.subline {
+  @apply font-serif leading-relaxed tracking-normal;
+}
+
+/** 
+  * Layout
+  */
+
+.grid-layout {
+  @apply grid grid-cols-8 gap-8 md:grid-cols-10;
+}
+
+/* .list ul li {
+  margin-left: 25px;
+  display: inline-block;
+}
+
+.list ul li::before {
+  content: '•';
+  display: inline-block;
+  width: 25px;
+  margin-left: -25px;
+} */
+
+/* .textblock ol li {
+  margin-left: 25px;
+  display: inline-block;
+  counter-increment: inst;
+}
+
+.textblock ol li::before {
+  content: counter(inst);
+  display: inline-block;
+  width: 25px;
+  margin-left: -25px;
+} */
+
+/** 
+  * Additional
+  */
+
+@media (min-width: 900px) {
+}

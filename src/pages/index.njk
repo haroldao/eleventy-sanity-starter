@@ -1,0 +1,14 @@
+---
+template: frontpage
+slug: /
+---
+
+{# {% set cls = cycler("odd", "even") %}
+{% for row in rows %}
+  <div class="{{ cls.next() }}">{{ row.name }}</div>
+{% endfor %} #}
+
+<div>
+  {{ frontpage.lang[locale] }}
+  {{ frontpage.description[locale] | richtext | safe  }}
+</div>

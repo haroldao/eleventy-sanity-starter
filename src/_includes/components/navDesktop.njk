@@ -1,0 +1,20 @@
+<nav class="hidden md:block z-30 space-x-4" data-nav-desktop>
+    {# {% for item in general.navigation %}
+      <a></a>
+    {% endfor %} #}
+    <a href="/" data-nav-item>Home</a>
+    <a href="/about" data-nav-item>About</a>
+</nav>
+
+{# 
+<nav class="h-0" data-nav>
+  <ul class="flex flex-col md:flex-row">
+    <li class="inline-block"><a class="link" href="{% if locale !== langs.default %}/{{ locale }}{% endif %}/" data-nav-item-work>{{ work.title[locale]}}</a><span>, </span></li>
+    <li class="inline-block md:ml-[3px]"><a class="link" href="{% if locale !== langs.default %}/{{ locale }}{% endif %}/" data-nav-item-exhibtions>{{ exhibitions.title[locale]}}</a><span>, </span></li>
+    <li class="inline-block md:mx-[3px]"><a class="link" href="{% if locale !== langs.default %}/{{ locale }}{% endif %}/{{ contact.slug[locale] }}/" data-nav-item>{{ contact.title[locale]}}</a><span>, </span></li>
+    <li class="inline-block md:mr-[3px]"><a class="link" href="{% if locale !== langs.default %}/{{ locale }}{% endif %}/{{ disclaimer.slug[locale] }}/" data-nav-item>{{ disclaimer.title[locale]}}</a><span>, </span></li>
+    <li class="flex">{% include "components/partials/languageSwitch.njk" %}</li>
+  </ul>
+</nav> #}
+
+{# <li><a class="{{ 'underline' if '/' === page.url }} {{ 'underline' if '/work' in page.url }} hover:underline" href="/" data-nav-item>Work</a></li> #}

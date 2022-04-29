@@ -1,0 +1,9 @@
+.preview {
+  aspect-ratio: 2 / 3;
+}
+
+@supports not (aspect-ratio: 1) {
+  .preview {
+    height: 50%;
+  }
+}

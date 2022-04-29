@@ -1,0 +1,23 @@
+{% if module._type === 'headline' %}
+  {{ headline(module) }}
+{% endif %}
+
+{% if module._type === 'textblock' %}
+  {{ textblock(module) }}
+{% endif %}
+
+{% if module._type === 'centeredImage' %}
+  {{ centeredImage(module) }}
+{% endif %}
+
+{% if module._type === 'fullscreenImage' %}
+  {{ fullscreenImage(module) }}
+{% endif %}
+
+{% if module._type === 'imageText' %}
+  {{ imageText(module) }}
+{% endif %}
+
+{% if module._type === 'mainVideo' %}
+  {{ embededVideo(module) }}
+{% endif %}
